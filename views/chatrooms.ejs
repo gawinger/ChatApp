@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./layouts/header') %>
+  <body>
+    <%- include('./partials/navbar') %>
+    <main>
+      <section class="rooms">
+        <div class="rooms-header">
+          <h1>All Chatrooms</h1>
+          <%- include('./partials/flash-alerts') %>
+          <a href="/chatrooms/new" class="rooms-create"><span>+ Create New Chatroom</span></a>
+        </div>
+        <div class="rooms-container">
+          <% chatrooms.forEach(chatroom=>{%>
+          <div class="room">
+            <div class="room-info">
+              <!-- check if user has password, if so redirect to password page-->
+              <a <% if(!chatroom.password) { %>
+                href="/chatrooms/<%= chatroom.id %>" <% }else{ %> href="/chatrooms/<%= chatroom.id %>/password " <% } %> >
+                <div class="room-name room-block">
+                  <%= chatroom.name %> <% if(!chatroom.password) {%>
+                  <i class="fas fa-lock-open"></i>
+                  <% } else { %>
+                  <i class="fas fa-lock"></i>
+                  <% } %>
+                </div>
+                <div class="room-description room-block">
+                  <p><%= chatroom.description %></p>
+                </div>
+              </a>
+            </div>
+            <div class="room-tags">
+              <% if(chatroom.tags.length === 0){ %>
+              <div class="room-tag">Just Chat</div>
+              <% } else { chatroom.tags.forEach(tag=>{ %>
+              <div class="room-tag"><%= tag %></div>
+              <% })}%>
+            </div>
+          </div>
+          <%}) %>
+        </div>
+      </section>
+    </main>
+
+    <%- include('./partials/footer') %>
+  </body>
+</html>

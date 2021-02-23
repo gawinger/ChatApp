@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./layouts/header') %>
+  <body>
+    <%- include('./partials/navbar') %>
+    <main>
+      <div class="form-container">
+        <div class="alert-container"><%- include('./partials/flash-alerts') %></div>
+        <div class="login-container">
+          <h1>Log In</h1>
+          <form action="/login" method="POST">
+            <div class="form">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" required />
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="button-container">
+              <button>Log in</button>
+            </div>
+            <a href="/register" class="or-register"><button type="button">or Create New Account</button></a>
+          </form>
+        </div>
+      </div>
+    </main>
+    <%- include('./partials/footer') %>
+  </body>
+</html>

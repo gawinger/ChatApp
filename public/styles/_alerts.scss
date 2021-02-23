@@ -1,0 +1,40 @@
+@import "config";
+
+.alert-container {
+  margin-top: 0px;
+  width: 100%;
+  height: 100px;
+}
+
+.flash-alert {
+  margin: 15px auto;
+  color: $primary-color;
+  padding: 20px 30px;
+  font-size: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+
+.flash-close {
+  color: $primary-color;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  margin-top: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: 25px;
+}
+.flash-close:hover {
+  background-color: transparent;
+}
+
+.flash-success {
+  background-color: rgb(182, 247, 169);
+}
+
+.flash-error {
+  background-color: rgb(238, 135, 135);
+}

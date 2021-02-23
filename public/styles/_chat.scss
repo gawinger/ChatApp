@@ -1,0 +1,125 @@
+@import "config";
+
+.chat-main {
+  flex-grow: 1;
+  height: calc(100vh - 116px);
+}
+
+.chat-messages {
+  overflow-y: auto;
+  height: 90%;
+  padding-right: 20px;
+}
+
+.chat-info {
+  min-height: 200px;
+  height: 25%;
+  background-color: $primary-color;
+  color: $light-text;
+  text-align: center;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  .chat-name {
+    height: 40%;
+    font-size: 30px;
+  }
+}
+
+.chat-users-header {
+  text-align: center;
+  font-size: 25px;
+}
+
+.chat {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  background-color: $secondary-color;
+  .show-details {
+    display: none;
+  }
+  .chat-sidebar {
+    p {
+      margin: 0;
+    }
+    width: 20%;
+    background-color: $tertiary-color;
+    .chat-info {
+      min-height: 0;
+      height: auto;
+    }
+    .chat-users {
+      height: 75%;
+      padding: 20px;
+      li {
+        font-size: 18px;
+      }
+    }
+    .chat-delete {
+      white-space: nowrap;
+      width: auto;
+      padding: 10px;
+      color: $primary-color;
+      background-color: rgb(221, 96, 96);
+    }
+  }
+
+  .chat-container {
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+
+    #message-form {
+      margin-top: auto;
+      height: 40px;
+      width: 100%;
+      display: flex;
+      label {
+        display: none;
+      }
+      #message {
+        width: 90%;
+        margin: 0;
+        border-radius: 0;
+      }
+      button {
+        margin: 0;
+        width: 10%;
+        height: 50px;
+        padding: 0px;
+        border-radius: 0;
+      }
+    }
+    .message {
+      box-sizing: border-box;
+      padding: 10px 20px;
+      width: 100%;
+      height: auto;
+      word-wrap: break-word;
+      background-color: $secondary-color;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+      @include set-text-color($secondary-color);
+      .message-info {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        font-size: 18px;
+      }
+      .message-message {
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 0;
+      }
+    }
+  }
+}

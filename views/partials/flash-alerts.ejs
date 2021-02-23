@@ -1,0 +1,15 @@
+<!-- Success -->
+<% if(success.length){ %>
+<div class="flash-alert flash-success">
+  <p><%= success %></p>
+  <button class="flash-close"><i class="fas fa-times"></i></button>
+</div>
+<% } %>
+
+<!-- Error -->
+<% if(error.length){ %>
+<div class="flash-alert flash-error">
+  <p><%= error %></p>
+  <button class="flash-close"><i class="fas fa-times"></i></button>
+</div>
+<% } %>

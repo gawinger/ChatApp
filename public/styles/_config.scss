@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Roboto&display=swap");
+$primary-color: #2e3532;
+$secondary-color: #e0e2db;
+$tertiary-color: #b86945;
+$background-color: #f4f7f6;
+$light-text: #e0e2db;
+$dark-text: #373d3a;
+
+@function text-color($color) {
+  @if (lightness($color) > 50%) {
+    @return $dark-text;
+  } @else {
+    @return $light-text;
+  }
+}
+
+@mixin set-text-color($color) {
+  color: text-color($color);
+}

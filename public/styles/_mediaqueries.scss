@@ -1,0 +1,307 @@
+@import "config";
+
+@media (max-width: 1400px) {
+  .home-text {
+    height: 65%;
+    h1 {
+      font-size: 35px;
+      padding: 25px 20px;
+    }
+    p {
+      font-size: 22px;
+      padding: 5px 10px;
+    }
+    p:last-of-type {
+      padding-bottom: 20px;
+    }
+    button {
+      padding: 5px 15px;
+      font-size: 23px;
+    }
+  }
+  .form-container {
+    width: 55%;
+    .login-container {
+      min-height: 380px;
+      h1 {
+        margin-bottom: 0;
+      }
+      .button-container {
+        button {
+          margin: 0;
+        }
+      }
+      .or-register {
+        button {
+          padding: 7px 15px;
+        }
+      }
+    }
+  }
+  .rooms {
+    width: 90%;
+    .rooms-header {
+      h1 {
+        font-size: 35px;
+      }
+    }
+    .rooms-container {
+      .room {
+        .room-info {
+          width: 100%;
+          a {
+            .room-name {
+              padding: 0 40px;
+              font-size: 25px;
+              text-align: center;
+              i {
+                left: 0;
+              }
+            }
+            .room-description {
+              height: 75%;
+              padding: 10px;
+              p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 21px;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .new-room-tags .tag-button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  main input {
+    height: 40px;
+  }
+  .form-container {
+    width: 70%;
+  }
+  .home-img {
+    height: 35%;
+    img {
+      width: 100%;
+    }
+    span {
+      font-size: 15px;
+    }
+  }
+  .rooms {
+    width: 80%;
+    h1 {
+      font-size: 30px;
+    }
+    .rooms-create {
+      font-size: 25px;
+    }
+    .rooms-container {
+      .room {
+        width: 100%;
+        flex-direction: column;
+        min-height: 200px;
+        height: auto;
+        .room-info {
+          width: 100%;
+          a {
+            .room-name {
+              height: 25%;
+              font-size: 30px;
+              i {
+                top: 8px;
+                font-size: 35px;
+              }
+            }
+          }
+        }
+        .room-tags {
+          width: 100%;
+          height: 25%;
+          flex-direction: row;
+          justify-content: space-evenly;
+          .room-tag {
+            width: 100%;
+            border-bottom: none;
+          }
+          .room-tag:first-of-type {
+            border: none;
+          }
+        }
+      }
+      .room-tags {
+        width: 100%;
+        height: 25%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        .room-tag {
+          width: 100%;
+          border-bottom: none;
+        }
+        .room-tag:first-of-type {
+          border: none;
+        }
+      }
+    }
+  }
+  .chat {
+    position: relative;
+    flex-direction: column;
+    .show-details {
+      display: block;
+      margin-top: 0;
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      padding: 5px 12px;
+      background-color: transparent;
+      color: $tertiary-color;
+      z-index: 100;
+      i {
+        font-size: 25px;
+      }
+    }
+
+    .chat-sidebar {
+      position: absolute;
+      width: 100%;
+      transform: translateY(-100%);
+      transition: transform 0.5s ease;
+      max-height: 70vh;
+      .chat-info {
+        padding: 10px 3px;
+        .chat-name {
+          font-size: 25px;
+        }
+        p {
+          height: 50%;
+        }
+      }
+      .chat-users {
+        height: auto;
+        ul {
+          display: flex;
+          li {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .show-sidebar {
+      transform: translateY(0);
+    }
+    .chat-container {
+      width: 100%;
+      .chat-messages {
+        height: 70vh;
+        .message-info {
+          padding: 0;
+        }
+        .message {
+          padding: 10px;
+        }
+      }
+    }
+  }
+  .chat .chat-container #message-form button {
+    height: 40px;
+    width: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  body button {
+    padding: 7px 30px;
+  }
+
+  main input {
+    height: 35px;
+  }
+
+  .home-text {
+    h1 {
+      font-size: 30px;
+      padding: 5px 20px;
+    }
+    p {
+      font-size: 17px;
+    }
+    button {
+      font-size: 20px;
+    }
+  }
+  .home-img {
+    span {
+      font-size: 11px;
+    }
+  }
+  .form-container {
+    width: 90%;
+    .login-container {
+      min-height: 370px;
+    }
+  }
+
+  .flash-alert {
+    padding: 10px 20px;
+    margin: 5px 0;
+    .flash-close {
+      top: 5px;
+      right: 8px;
+    }
+  }
+
+  .alert-container {
+
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+  .new-room-tags .tag-button {
+    width: 50%;
+  }
+  .rooms {
+    width: 90%;
+    .rooms-header {
+      h1 {
+        font-size: 25px;
+      }
+      .rooms-create {
+        font-size: 18px;
+      }
+    }
+    .rooms-container {
+      .room {
+        a {
+          .room-name {
+            font-size: 20px !important;
+            padding: 30px 10px 0 30px;
+            height: auto !important;
+            text-align: center;
+            i {
+              left: 5px !important;
+              font-size: 30px !important;
+            }
+          }
+          .room-description {
+            p {
+              font-size: 18px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .chat .chat-container #message-form button {
+    height: 35px;
+    width: 50px;
+  }
+}

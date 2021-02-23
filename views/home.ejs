@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./layouts/header') %>
+  <body class="home-body">
+    <%- include('./partials/navbar') %>
+    <main>
+      <div class="home-container">
+        <div class="home-text">
+          <h1>HayoChat - Free Chat Rooms</h1>
+          <p class="home-message-text">Talk with strangers, find new friends or maybe share some secrets about Yourself!</p>
+          <p class="home-message-text">Search for chatrooms with tags You want to chat about or create new ones.</p>
+          <!-- check if user is logged in -->
+          <% if(currentUser) {%> 
+            <a href="/chatrooms"> 
+          <% } else {%>
+            <a href="/login">
+          <% } %>
+          <button>Start Chatting!</button>  </a>
+        </div>
+        <div class="home-img">
+          <img src="/images/people.png" alt="" />
+          <span class="image-src">Vector image by VectorStock</span>
+          <span class="author">Bartosz Czupryna 2021</span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

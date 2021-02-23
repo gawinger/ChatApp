@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./layouts/header') %>
+  <body>
+    <%- include('./partials/navbar') %>
+    <main class="chat-main">
+      <section class="chat">
+        <button class="show-details"><i class="fas fa-info-circle"></i></button>
+
+        <div class="chat-sidebar">
+          <script id="sideBar-template" type="text/html">
+            <div class="chat-info">
+              <p class="chat-name"><%= room.name %></p>
+              <p><%= room.description %></p>
+              <% if(currentUser.username === room.createdBy || currentUser.username === 'admin'){ %>
+              <form action="/chatrooms/<%= room.id %>?_method=DELETE" method="POST">
+                <button class="chat-delete"><i class="fas fa-trash"></i> Delete Chatroom</button>
+              </form>
+              <%}%>
+            </div>
+            <div class="chat-users">
+              <p class="chat-users-header">Users in room</p>
+              <ul class="users">
+                {{#users}}
+                <li>{{username}}</li>
+                {{/users}}
+              </ul>
+            </div>
+          </script>
+        </div>
+        <div class="chat-container">
+          <div class="chat-messages">
+            <script id="message-template" type="text/html">
+              <div class="message">
+                <div class="message-info">
+                  <span><b>{{ username }}</b></span>
+                  <span>{{ timestamp }}</span>
+                </div>
+                <div class="message-message">{{ message }}</div>
+              </div>
+            </script>
+            <script id="joined-template" type="text/html">
+              <div class="message">
+                <div class="message-info"><b>{{username}}{{ message }}</b></div>
+              </div>
+            </script>
+          </div>
+          <form id="message-form" autocomplete="off">
+            <label for="message">Message</label>
+            <input type="text" name="message" id="message" required />
+            <button><i class="fas fa-arrow-right"></i></button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <%- include('./partials/footer') %>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.6/qs.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/scripts/chat.js"></script>
+  <script>
+    const showDetailsBtn = document.querySelector(".show-details");
+    const chatSidebar = document.querySelector(".chat-sidebar");
+    showDetailsBtn.addEventListener("click", () => {
+      chatSidebar.classList.toggle("show-sidebar");
+    });
+  </script>
+</html>

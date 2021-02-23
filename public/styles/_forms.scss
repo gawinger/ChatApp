@@ -1,0 +1,91 @@
+@import "config";
+
+.new-room-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  .tag-button {
+    width: 20%;
+    height: 50px;
+    display: flex;
+  }
+  input {
+    display: none;
+  }
+  input + label {
+    background: $primary-color;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: $light-text;
+    transition: background-color 0.5s;
+    border-top: 2px solid $light-text;
+    margin: 0 1px;
+  }
+  input:not(:checked) + label:hover {
+    background-color: lighten($primary-color, 25%);
+  }
+  input + label:active,
+  input:checked + label {
+    background: lighten($primary-color, 25%);
+  }
+}
+
+.form-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#room-password {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    padding-bottom: 20px;
+  }
+  button {
+    margin-top: 30px;
+  }
+}
+
+.login-container {
+  width: 100%;
+  background-color: $secondary-color;
+  box-sizing: border-box;
+  padding: 2% 10%;
+  font-size: 20px;
+  border: 5px solid $tertiary-color;
+  position: relative;
+  margin: 5px 0;
+  @include set-text-color($secondary-color);
+
+  h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  .button-container {
+    text-align: center;
+  }
+  .or-register {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    button {
+      margin-top: 0;
+      border-radius: 0;
+      background-color: $primary-color;
+    }
+    button:hover {
+      background-color: lighten($primary-color, 20%);
+    }
+  }
+}

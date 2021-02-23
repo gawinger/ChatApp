@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./layouts/header') %>
+  <body>
+    <%- include('./partials/navbar') %>
+    <main>
+      <div class="form-container">
+        <%- include('./partials/flash-alerts') %>
+        <div class="login-container">
+          <h1>Create New Chatroom</h1>
+          <form action="/chatrooms" method="POST">
+            <div class="form">
+              <label for="name">Room name</label>
+              <input type="text" id="name" name="name" maxlength="20" required />
+              <label for="password">Password (optional)</label>
+              <input type="password" id="password" name="password" />
+              <label for="description">Description</label>
+              <textarea type="text" id="description" name="description" rows="3" maxlength="120" required></textarea>
+            </div>
+            <p>What whould you like to talk about?</p>
+            <div class="new-room-tags">
+              <div class="tag-button">
+                <input type="checkbox" id="justChat" name="tags" value="Just Chat" />
+                <label for="justChat">Just Chat</label>
+              </div>
+              <div class="tag-button">
+                <input type="checkbox" id="advices" name="tags" value="Advices" />
+                <label for="advices">Advices</label>
+              </div>
+              <div class="tag-button">
+                <input type="checkbox" id="travel" name="tags" value="Travel" />
+                <label for="travel">Travel</label>
+              </div>
+              <div class="tag-button">
+                <input type="checkbox" id="games" name="tags" value="Games" />
+                <label for="games">Games</label>
+              </div>
+              <div class="tag-button">
+                <input type="checkbox" id="motivation" name="tags" value="Motivation" />
+                <label for="motivation">Motivation</label>
+              </div>
+              <div class="tag-button">
+                <input type="checkbox" id="sport" name="tags" value="Sport" />
+                <label for="sport">Sport</label>
+              </div>
+              <div class="tag-button">
+                <input type="checkbox" id="books" name="tags" value="Books" />
+                <label for="books">Books</label>
+              </div>
+              <div class="tag-button">
+                <input type="checkbox" id="politics" name="tags" value="Politics" />
+                <label for="politics">Politics</label>
+              </div>
+              <div class="tag-button">
+                <input type="checkbox" id="music" name="tags" value="Music" />
+                <label for="music">Music</label>
+              </div>
+              <div class="tag-button">
+                <input type="checkbox" id="movies" name="tags" value="Movies" />
+                <label for="movies">Movies</label>
+              </div>
+            </div>
+            <div class="button-container">
+              <button>Create Chatroom</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <%- include('./partials/footer') %>
+    <script src="/scripts/checkboxLimit.js"></script>
+  </body>
+</html>
