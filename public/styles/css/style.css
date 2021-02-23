@@ -7,31 +7,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Roboto&display=swap");
 .rooms {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #373d3a;
 }
 
 .rooms .rooms-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 15px 0;
 }
 
 .rooms .rooms-header h1 {
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   font-size: 40px;
 }
 
 .rooms .rooms-header .rooms-create {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   font-size: 30px;
   font-weight: bold;
   color: #2e3532;
+  -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
 
@@ -40,9 +58,14 @@
 }
 
 .rooms .rooms-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .rooms .rooms-container .room {
@@ -51,7 +74,10 @@
   margin-bottom: 30px;
   background-color: #e0e2db;
   border: 5px solid #b86945;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
 
@@ -63,20 +89,31 @@
 .rooms .rooms-container .room-info a {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 10px;
   color: #373d3a;
 }
 
 .rooms .rooms-container .room-info a .room-block {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .rooms .rooms-container .room-info a .room-name {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: bold;
   height: 40%;
   font-size: 30px;
@@ -94,7 +131,8 @@
   height: 60%;
   word-wrap: break-word;
   padding: 10px 10%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   overflow: hidden;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0;
@@ -102,9 +140,15 @@
 }
 
 .rooms .rooms-container .room-info a .room-description p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 21px;
   text-align: center;
   width: 100%;
@@ -113,8 +157,13 @@
 
 .rooms .rooms-container .room-tags {
   width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #2e3532;
   font-size: 18px;
   color: #e0e2db;
@@ -122,9 +171,15 @@
 }
 
 .rooms .rooms-container .room-tags .room-tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   white-space: nowrap;
   border-left: 5px solid #b86945;
@@ -146,16 +201,28 @@
 .home-container {
   text-align: center;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .home-text {
   min-height: 340px;
   height: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #373d3a;
   border-bottom: 10px solid #b86945;
   font-weight: bold;
@@ -199,8 +266,10 @@
   margin: auto;
   width: 70%;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 35%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 35%;
+     object-position: 50% 35%;
   opacity: 0.8;
 }
 
@@ -218,6 +287,14 @@
   left: 20px;
 }
 
+.home-img .author a {
+  color: #2e3532;
+}
+
+.home-img .author a:hover {
+  color: #b86945;
+}
+
 .alert-container {
   margin-top: 0px;
   width: 100%;
@@ -230,7 +307,8 @@
   padding: 20px 30px;
   font-size: 20px;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-align: center;
   position: relative;
 }
@@ -259,7 +337,9 @@
 }
 
 .chat-main {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: calc(100vh - 116px);
 }
 
@@ -275,14 +355,21 @@
   background-color: #2e3532;
   color: #e0e2db;
   text-align: center;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-bottom: 20px;
 }
 
 .chat-info p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 60%;
   font-size: 18px;
   padding: 0 20px;
@@ -300,8 +387,11 @@
 
 .chat {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #e0e2db;
 }
 
@@ -343,16 +433,24 @@
 .chat .chat-container {
   width: 80%;
   height: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .chat .chat-container #message-form {
   margin-top: auto;
   height: 40px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -375,7 +473,8 @@
 }
 
 .chat .chat-container .message {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 10px 20px;
   width: 100%;
   height: auto;
@@ -386,8 +485,12 @@
 }
 
 .chat .chat-container .message .message-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-bottom: 10px;
   font-size: 18px;
 }
@@ -398,14 +501,19 @@
 }
 
 .new-room-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 15px;
 }
 
 .new-room-tags .tag-button {
   width: 20%;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -417,11 +525,18 @@
   background: #2e3532;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
   color: #e0e2db;
+  -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
   border-top: 2px solid #e0e2db;
   margin: 0 1px;
@@ -438,15 +553,29 @@
 
 .form-container {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #room-password {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #room-password h1 {
@@ -460,7 +589,8 @@
 .login-container {
   width: 100%;
   background-color: #e0e2db;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 2% 10%;
   font-size: 20px;
   border: 5px solid #b86945;
@@ -555,9 +685,15 @@
     padding: 10px;
   }
   .rooms .rooms-container .room .room-info a .room-description p {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 21px;
     text-align: center;
   }
@@ -593,7 +729,10 @@
   }
   .rooms .rooms-container .room {
     width: 100%;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     min-height: 200px;
     height: auto;
   }
@@ -611,8 +750,13 @@
   .rooms .rooms-container .room .room-tags {
     width: 100%;
     height: 25%;
-    flex-direction: row;
-    justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .rooms .rooms-container .room .room-tags .room-tag {
     width: 100%;
@@ -624,8 +768,13 @@
   .rooms .rooms-container .room-tags {
     width: 100%;
     height: 25%;
-    flex-direction: row;
-    justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   .rooms .rooms-container .room-tags .room-tag {
     width: 100%;
@@ -636,7 +785,10 @@
   }
   .chat {
     position: relative;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .chat .show-details {
     display: block;
@@ -655,8 +807,12 @@
   .chat .chat-sidebar {
     position: absolute;
     width: 100%;
-    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
     max-height: 70vh;
   }
   .chat .chat-sidebar .chat-info {
@@ -672,13 +828,16 @@
     height: auto;
   }
   .chat .chat-sidebar .chat-users ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .chat .chat-sidebar .chat-users ul li {
     width: 100%;
   }
   .chat .show-sidebar {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .chat .chat-container {
     width: 100%;
@@ -733,7 +892,6 @@
     right: 8px;
   }
   .alert-container {
-    margin-top: 0px;
     margin-bottom: 20px;
     height: auto;
   }
@@ -780,8 +938,13 @@ body {
   min-height: 100vh;
   font-family: "Londrina Solid", cursive !important;
   letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body a {
@@ -800,13 +963,15 @@ body button {
   letter-spacing: 1;
   background-color: #b86945;
   color: #e0e2db;
+  -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
 
 body button:focus,
 body button:active {
   outline: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 body button:hover {
@@ -825,6 +990,7 @@ nav {
 }
 
 nav .nav-link {
+  -webkit-transition: color 0.5s;
   transition: color 0.5s;
   color: #e0e2db !important;
   margin: auto;
@@ -850,7 +1016,9 @@ nav .navbar-toggler {
 }
 
 nav #navbarNav {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 footer {
@@ -858,28 +1026,49 @@ footer {
   width: 100%;
   height: 40px;
   color: #e0e2db;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer a:hover {
+  color: #b86945;
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 80vh;
   width: 100%;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 main input,
 main textarea {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   margin-top: 5px;
   margin-bottom: 20px;
   font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: none;
   font-family: "Roboto", sans-serif;
 }
