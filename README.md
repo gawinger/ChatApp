@@ -8,3 +8,5 @@ App is created with **javascript** and **socket.io** library that enables realti
 Backend portion is made with **node.js** with **express.js**. Data about users and rooms is stored in **mongoDB** database.\
 User authentication is created with **passport.js**.\
 Additionally to maintain good atmosphere I added admin accounts that are capable of deleting chatrooms.\
+
+View Live: https://chatapp.bartoszczupryna.com/
